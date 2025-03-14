@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Jewelry Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Wiser Jewelry</h1>
+        <nav>
+              <ul>
+                <li><a href="gallery.html">Designs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Designs</h2>
+        <div class="gallery-container" id="galleryContainer">
+            <!-- Image gallery will appear here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wiser Jewelry | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const galleryContainer = document.getElementById("galleryContainer");
+
+        const imagePaths = [
+            "https://raw.githubusercontent.com/WiserJewelry/Designs/refs/heads/main/portfolio/ftp%20rendered.PNG",  // Add your own image names here
+            "https://raw.githubusercontent.com/WiserJewelry/Designs/refs/heads/main/portfolio/jetsetter%203.PNG",
+            "https://raw.githubusercontent.com/WiserJewelry/Designs/refs/heads/main/portfolio/razor%20rendered.PNG",
+            "https://raw.githubusercontent.com/WiserJewelry/Designs/refs/heads/main/portfolio/star%20link%20rendered.PNG",
+            "https://raw.githubusercontent.com/WiserJewelry/Designs/refs/heads/main/portfolio/stuff.PNG",
+            // Add more images as needed
+        ];
+
+        imagePaths.forEach(path => {
+            const imgElement = document.createElement("img");
+            imgElement.src = path;
+            imgElement.alt = "Jewelry Design";
+            galleryContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
