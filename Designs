@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Jewelry Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gallery {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .gallery h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center; /* Centers images horizontally within the grid */
+            align-items: center;   /* Centers images vertically within the grid */
+        }
+
+        .gallery-container img {
+            width: 100%;
+            max-width: 300px; /* Optional: Set a max-width for images */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wiser Jewelry</h1>
+        <nav>
+              <ul>
+                <li><a href="gallery.html">Designs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h2>Designs</h2>
+        <div class="gallery-container" id="galleryContainer">
+            <!-- Image gallery will appear here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wiser Jewelry | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const galleryContainer = document.getElementById("galleryContainer");
+
+        const imagePaths = [
+            "images/jewelry1.jpg",  // Add your own image names here
+            "images/jewelry2.jpg",
+            "images/jewelry3.jpg",
+            "images/jewelry4.jpg",
+            // Add more images as needed
+        ];
+
+        imagePaths.forEach(path => {
+            const imgElement = document.createElement("img");
+            imgElement.src = path;
+            imgElement.alt = "Jewelry Design";
+            galleryContainer.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
